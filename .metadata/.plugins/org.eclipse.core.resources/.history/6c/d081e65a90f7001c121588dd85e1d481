@@ -1,0 +1,31 @@
+package hexa.calculator;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		HexCalc h = new HexCalc();
+		Scanner scan = new Scanner(System.in);
+		String opt = " 1. Calculator \n 2. Convert \n 3. Compare \n 4. Exit";
+		while(true){
+		again:try{
+		System.out.println(" Choose an option \n" + opt);			
+		int choice = scan.nextInt();
+		if(choice == 4) {
+			break;
+		}		
+		switch(choice){
+		case 1:h.calculator();
+		break;
+		case 2:h.convert();
+		break;
+		case 3:h.compare();
+		break;
+		default:
+			System.out.print("Please choose correct option : " );
+		}}
+		catch(Exception e ){
+			System.out.println(" Invalid Input ! Please try again ");
+			break again;
+		}
+}}}

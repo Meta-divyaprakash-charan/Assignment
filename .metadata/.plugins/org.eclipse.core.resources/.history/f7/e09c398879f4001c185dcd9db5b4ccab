@@ -1,0 +1,17 @@
+import java.util.*;
+public class Function {
+	ArrayList<Item> itemList = ArrayList<Item>();
+	void addItem(String name){
+		Item item;
+		Scanner sc = new Scanner(System.in);
+		item.item_name = name;
+		System.out.println("Enter Item unique ID: ");
+		item.item_id = sc.nextInt();
+		System.out.println("Enter Item Description: ");
+		item.item_desc = sc.next();
+		System.out.println("Enter Item price: ");
+		item.item_price = sc.nextDouble();
+		itemList.add(item);		
+	}
+
+}

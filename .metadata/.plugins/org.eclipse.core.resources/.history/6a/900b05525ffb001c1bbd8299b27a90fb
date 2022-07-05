@@ -1,0 +1,14 @@
+package calculate;
+public class recursion{
+	int calculateLCM(int num1, int num2){
+		int lcm = (num1*num2)/HCF(num1,num2);
+		return lcm;
+	}
+	
+	int HCF(int num1, int num2){
+		if(num1==0)
+			return num2;
+		return HCF(num2,num1%num2);
+	}
+	
+}

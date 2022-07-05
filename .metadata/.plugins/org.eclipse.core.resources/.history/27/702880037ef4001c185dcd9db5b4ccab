@@ -1,0 +1,8 @@
+import java.util.*;
+public class UI {
+public static Boolean showMsg() {
+	System.out.println(" Select an option \n 1. User \t 2. Admin : ");
+	Scanner s = new Scanner(System.in);
+	int opt = s.nextInt();
+	return (opt==1);
+}}

@@ -1,0 +1,8 @@
+
+public class Tesrt {
+
+	public static void main(String[] args) {
+		UI.showMsg();
+	}
+
+}

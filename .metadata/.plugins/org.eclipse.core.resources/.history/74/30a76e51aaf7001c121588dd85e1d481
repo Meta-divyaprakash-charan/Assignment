@@ -1,0 +1,43 @@
+
+public class fcfs {
+	static int waitingTime[];
+	static int turnAroundTime[];
+	static int compTime[];
+
+void completionTime(int[][] arr, int n){
+		int pre = 0;
+		for(int i=0;i<n;i++){
+			pre += arr[i][1];
+			compTime[i] = pre;			
+}}
+	
+void turnAroundTime(int[][] process, int[] cT, int n){
+	for(int i = 0;i<n;i++) {
+		turnAroundTime[i] = cT[i] - process[i][0];
+	}	
+	}
+
+void waitingTime(int[][] process, int[] taT, int n){
+	for(int i = 0;i<n;i++) {
+		waitingTime[i] = taT[i] - process[i][1];
+	}	
+	
+}
+
+float avgWaitingTime(int [] wT, int n){
+	int totalwaitTime = 0;
+	for(int i=0;i<n;i++) {
+		totalwaitTime += wT[i];
+	}
+	float avg = (float)totalwaitTime/(float)n;
+	return avg;
+}
+
+int maxWaitingTime(int [] wT){
+	int max = 0;
+	for(int i=0;i<wT.length;i++) {
+		max = (max<wT[i])?wT[i]:max;
+	}
+	return max;
+	}
+}

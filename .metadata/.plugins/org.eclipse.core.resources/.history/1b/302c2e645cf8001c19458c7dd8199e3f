@@ -1,0 +1,33 @@
+/**
+ * -This file is part of calculator 
+ * 
+ * @author Divyaprakash
+ *
+ */
+package calculator;
+
+import java.util.*;
+
+public class Marksheet{
+	float findAvg(int[] result){
+		int sum = 0;
+		for(int i = 0; i<result.length ;i++){
+			sum+=result[i];
+		}
+		return (float)sum/result.length;
+	}
+	
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print(" Enter number of students : ");
+		int n = scan.nextInt();
+		int[] result = new int[n];
+		
+		for(int i = 0; i<n ;i++){
+			result[i] = scan.nextInt();
+		}
+	}
+
+}

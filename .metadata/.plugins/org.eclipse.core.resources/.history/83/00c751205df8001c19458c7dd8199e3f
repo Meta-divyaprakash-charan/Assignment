@@ -1,0 +1,66 @@
+/**
+ * -This file is part of calculator 
+ * 
+ * @author Divyaprakash
+ *
+ */
+package calculator;
+
+import java.util.*;
+
+public class Marksheet{
+	float findAvg(int[] result){
+		int sum = 0;
+		for(int i = 0; i<result.length ;i++){
+			sum+=result[i];
+		}
+		return (float)sum/result.length;
+	}
+	
+	int findMax(int [] result) {
+		int max = result[0];
+		for(int i = 1; i<result.length;i++){
+			max = (max<result[i])?result[i]:max;
+		}
+		return max;
+	}
+	
+	int findMin(int [] result) {
+		int min = result[0];
+		for(int i = 1; i<result.length;i++){
+			min = (min>result[i])?result[i]:min;
+		}
+		return min;
+	}
+	
+	float percentageOfPassed(int [] result) {
+		int total = result.length;
+		return (passed(result, total)*100)/total;
+		}
+	
+	float passed(int[] result, int total){
+		float passed=0;
+		for(int i = 0; i<total;i++){
+			if(result[i]>40){
+				passed+=1;
+			}
+		}
+		return passed;
+	}
+	
+
+	public static void main(String[] args) {
+		Marksheet m = new Marksheet();
+		Scanner scan = new Scanner(System.in);
+		System.out.print(" Enter number of students : ");
+		int n = scan.nextInt();
+		int[] result = new int[n];
+		
+		for(int i = 0; i<n ;i++){
+			System.out.print("Enter number of " + (i+1) +" Student :");
+			result[i] = scan.nextInt();
+		}
+		System.out.println(m.findAvg(result) , m.findMax(result) , m.findMin(result) , m.percentageOfPassed(result));
+	}
+
+}

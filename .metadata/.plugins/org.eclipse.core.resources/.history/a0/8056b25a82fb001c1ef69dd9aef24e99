@@ -1,0 +1,53 @@
+package search;
+public class Search{
+	private int i = 0;
+	private int start = 0;
+	private int end;
+	private boolean firstTime = true;
+	/**
+	 * Specification
+	 * -Search an element in array by matching every other element
+	 * 
+	 * @param array
+	 * @param element
+	 * @return
+	 */
+	int linearSearch(int[] array, int element){
+			if(i>=array.length)
+				return -1;
+			if(array[i]==element){
+				return i;
+			}
+			i++;
+			return linearSearch(array, element);
+	}
+	int binarySearch(int[] array, int element){
+		if(firstTime){
+			end = array.length-1;
+			if(array[end]==element)
+				return end;
+			if(array[start]==element)
+				return start;
+			firstTime = false;
+		}
+		
+		i = (start+end)/2;
+		
+		if(array[i]==element){
+			return i;
+		}
+		
+		else if(array[i]<element){
+			start = i;
+		}
+		else{
+			end = i;
+		}
+		if(start+1==end){
+			return -1;
+		}
+		
+		return binarySearch(array, element);		
+	}
+
+}

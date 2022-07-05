@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.print("Enter number of process : ");
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		int[][] process = new int[n][2];
+		for(int i = 0;i<n;i++){
+			for(int j = 0; j<2;j++) {
+				process[i][j] = scan.nextInt();
+			}
+		}
+		
+		fcfs.sort(process);
+		
+		for(int i = 0;i<n;i++){
+			for(int j = 0; j<2;j++) {
+				System.out.println(process[i][j]);
+			}
+		}
+	}
+
+}

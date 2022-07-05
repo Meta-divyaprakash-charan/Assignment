@@ -1,0 +1,13 @@
+import java.util.*;
+public class Tesrt {
+
+	public static void main(String[] args) {
+		boolean user = UI.showMsg();
+		if(user){
+			Scanner sc = new Scanner(System.in);
+			String name = sc.next();
+			Function.addItem(name);
+		}
+	}
+
+}

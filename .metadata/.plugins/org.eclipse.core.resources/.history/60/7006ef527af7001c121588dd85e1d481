@@ -1,0 +1,36 @@
+package hexa.calculator;
+
+import java.util.Scanner;
+
+public class hexCalc{
+	static int base = 16;
+	static String hexValues = "0123456789ABCDEF";
+	static int hexaToDecimal(String hexa){
+		int decimalValue = 0;
+		for(int i =0;i<hexa.length();i++){
+			double power = hexa.length()-1-i;
+			char ch = hexa.charAt(i);
+			int index = hexValues.indexOf(ch);
+			decimalValue += (int)(Math.pow(16.0, power))*index;
+		}
+		
+		return decimalValue;
+	}
+
+	static String decimalToHexa(int deci,int base){
+		String hexaValue = "";
+		while(true){
+			int x = deci%base;
+			hexaValue = hexValues.charAt(x)+ hexaValue;			
+			deci = deci/base;
+			if(deci==0){	
+						break;
+			}}
+		return hexaValue;
+	}
+	
+	static String add(String h1, String h2){
+	int	r = hexaToDecimal(h1)+hexaToDecimal(h2);
+	return decimalToHexa(r, base);
+	}
+}

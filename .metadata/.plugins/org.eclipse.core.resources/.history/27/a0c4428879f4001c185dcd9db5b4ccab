@@ -1,0 +1,15 @@
+import java.util.*;
+public class UI {
+public static void showMsg() {
+	System.out.println(" Select an option \n 1. User \t 2. Admin : ");
+	Scanner s = new Scanner(System.in);
+	int opt = s.nextInt();
+	if(opt==1) {
+		System.out.print(" Welcome press 1 to add Item to cart");
+	}
+	else if(opt==2){
+		System.out.print(" Welcome choose from menu");
+		
+	}
+	}
+}

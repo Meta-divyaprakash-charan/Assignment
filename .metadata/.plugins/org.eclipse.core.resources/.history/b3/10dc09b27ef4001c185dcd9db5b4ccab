@@ -1,0 +1,24 @@
+import java.util.*;
+public class Tesrt {
+
+	public static void main(String[] args) {
+		boolean user = UI.showMsg();
+		ArrayList<Item> itemList = new ArrayList<Item>();
+		if(user){
+			Item item = new Item();
+			Scanner sc = new Scanner(System.in);
+			System.out.print("Enter product name : ");
+			String name = sc.next();
+			item.item_name = name;
+			System.out.println("Enter Item unique ID: ");
+			item.item_id = sc.nextInt();
+			System.out.println("Enter Item Description: ");
+			item.item_desc = sc.next();
+			System.out.println("Enter Item price: ");
+			item.item_price = sc.nextDouble();
+			itemList.add(item);
+		}
+	System.out.print(itemList);
+	}
+
+}

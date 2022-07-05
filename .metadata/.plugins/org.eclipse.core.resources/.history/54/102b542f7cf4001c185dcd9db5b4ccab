@@ -1,0 +1,14 @@
+import java.util.*;
+public class Tesrt {
+
+	public static void main(String[] args) {
+		boolean user = UI.showMsg();
+		if(user){
+			Scanner sc = new Scanner(System.in);
+			System.out.print("Enter product name : ");
+			String name = sc.next();
+			Function.addItem(name);
+		}
+	}
+
+}

@@ -1,0 +1,13 @@
+
+public class Item{
+	int item_id;
+	String item_name;
+	String item_desc;
+	double item_price;
+	/*Item(int id){
+		this.item_id = id;
+	}
+	Item(String name){
+		this.item_name = name;
+	}*/
+}

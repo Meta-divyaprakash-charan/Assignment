@@ -1,0 +1,40 @@
+package hexa.calculator;
+
+import java.util.Scanner;
+
+public class hexCalc {
+	int base = 16;
+	int hexaToDecimal(String hexa){
+		int decimalValue = 0;
+		
+		return decimalValue;
+	}
+
+	static String decimalToHexa(int deci,int base){
+		String hexaValue = "";
+		while(true){
+			String x = Integer.toString(deci%base);
+			hexaValue = hexaValue + x;
+			
+			deci = deci/base;
+			if(deci==0){	
+						break;
+			}
+		}
+		return hexaValue;
+	}
+	String add(String h1, String h2){
+	int	r = hexaToDecimal(h1)+hexaToDecimal(h2);
+	return decimalToHexa(r, base);
+	}
+
+	public static void main(String[] args) {
+		System.out.print("Enter a decimal number : ");
+		Scanner scan = new Scanner(System.in);
+		int d = scan.nextInt();
+		String hexa = decimalToHexa(d,16);
+		System.out.println(hexa);
+		
+	}
+
+}

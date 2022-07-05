@@ -1,0 +1,40 @@
+import java.util.Arrays;
+
+public class fcfs {
+	int waitingTime[];
+	int turnAroundTime[];
+	int compTime[];
+	static int sort(int arr[][]) {
+        for (int i = 0; i < arr.length; i++) {
+            Arrays.sort(arr[i]);
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++)
+                System.out.print(arr[i][j] + " ");
+                System.out.println();
+        }
+
+        return 0;
+    }
+
+void completionTime(){
+		
+	}
+	
+void turnAroundTime(){
+			
+	}
+
+void waitingTime(){
+	
+}
+
+int avgWaitingTime(){
+	return 0;
+}
+
+int maxWaitingTime(){
+	return 0;
+}
+}

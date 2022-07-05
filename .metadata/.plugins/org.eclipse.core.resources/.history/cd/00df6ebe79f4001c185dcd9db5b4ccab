@@ -1,0 +1,13 @@
+import java.util.*;
+public class Tesrt {
+
+	public static void main(String[] args) {
+		boolean user = UI.showMsg();
+		if(user){
+			String name = sc.next();
+			Function f;
+			f.addItem(name);
+		}
+	}
+
+}
